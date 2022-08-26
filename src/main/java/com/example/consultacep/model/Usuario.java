@@ -1,12 +1,13 @@
 package com.example.consultacep.model;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 
 
 import lombok.Data;
@@ -15,12 +16,14 @@ import lombok.Data;
 @Table(name="tab_user")
 @Data
 public class Usuario {
-     
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-
-    String name;
-
-    String endereco;
+    
+    @Column(name="nome")
+    String nome;
+    
+    @ManyToOne
+    Endereco endereco;
 }

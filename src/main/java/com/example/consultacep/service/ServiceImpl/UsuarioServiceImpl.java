@@ -1,4 +1,4 @@
-package com.example.consultacep.service.UsuarioServiceImpl;
+package com.example.consultacep.service.ServiceImpl;
 
 import org.springframework.stereotype.Service;
 
@@ -20,6 +20,30 @@ public class UsuarioServiceImpl  implements UsuarioService{
     @Override
     public Iterable<Usuario> getAll() {
         return uRepository.findAll();
+    }
+
+    @Override
+    public Usuario findById(Long id) {
+         uRepository.findById(id);
+        return null;
+    }
+
+    @Override
+    public Iterable<Usuario> listById() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Usuario updateUser(Long id, Usuario usuario) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+        // TODO Auto-generated method stub
+        
     }
     
 }
