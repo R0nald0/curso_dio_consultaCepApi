@@ -8,7 +8,7 @@ public interface UsuarioService {
 
     Usuario findById(Long id);
 
-    Iterable<Usuario> listById();
+    Iterable<Usuario> listById(Long id);
 
     void insertUser(Usuario usuario);
 

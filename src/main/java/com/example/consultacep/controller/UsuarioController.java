@@ -33,6 +33,11 @@ public class UsuarioController {
        return ResponseEntity.ok(uService.getAll());
    }
 
+   @GetMapping("/{id}")
+   public ResponseEntity<Usuario> buscarPoriId(@PathVariable Long id){
+       return ResponseEntity.ok(uService.findById(id));
+   }    
+
    @PostMapping
    public ResponseEntity<Usuario> inserirUsuario(@RequestBody Usuario usuario){
         uService.insertUser(usuario);

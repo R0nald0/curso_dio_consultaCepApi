@@ -33,14 +33,15 @@ public class UsuarioServiceImpl  implements UsuarioService{
 
     @Override
     public Usuario findById(Long id) {
-         uRepository.findById(id);
-        return null;
+        Usuario  user  = uRepository.findById(id).orElseGet(()->{
+            return null;
+        });     
+          return user;
     }
 
     @Override
-    public Iterable<Usuario> listById() {
-        // TODO Auto-generated method stu
-        return null;
+    public Iterable<Usuario> listById(Long id) {
+            return null;
     }
 
 
