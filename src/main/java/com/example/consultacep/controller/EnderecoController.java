@@ -20,7 +20,7 @@ import com.example.consultacep.service.EnderecoService;
 
 @RestController
 @CrossOrigin(origins = "**",maxAge = 3600)
-@RequestMapping("endereco")
+@RequestMapping("/endereco")
 public class EnderecoController {
     
     final EnderecoService eService;
