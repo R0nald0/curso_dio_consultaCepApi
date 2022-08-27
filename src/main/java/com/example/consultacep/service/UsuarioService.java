@@ -10,7 +10,9 @@ public interface UsuarioService {
 
     Iterable<Usuario> listById();
 
-    Usuario updateUser(Long id , Usuario usuario);
+    void insertUser(Usuario usuario);
+
+    void updateUser(Long id , Usuario usuario);
 
     void delete(Long id);
     
