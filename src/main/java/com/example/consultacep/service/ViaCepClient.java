@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.consultacep.model.Endereco;
 
-@FeignClient(name = "viacep",url = "http://viacep.com.br/ws")
+@FeignClient(name = "viacep",url = "http://viacep.com.br/ws/")
 public interface ViaCepClient {
 
-    @GetMapping(value = "/{cep}/json/")
+    @GetMapping(value ="{cep}/json/")
     Endereco consultacep(@PathVariable("cep") String cep);
           
 }

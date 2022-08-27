@@ -64,7 +64,6 @@ public class UsuarioServiceImpl  implements UsuarioService{
     }
 
     void salvaCep(Usuario user){
-
         String cep = user.getEndereco().getCep();   
           Endereco endereco = eRespository.findById(cep).orElseGet(()->{
                Endereco novoEndereco = viaCepClient.consultacep(cep);

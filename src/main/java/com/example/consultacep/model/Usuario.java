@@ -9,8 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
 import lombok.Data;
+
+
 
 @Entity
 @Table(name="tab_user")
@@ -18,11 +19,11 @@ import lombok.Data;
 public class Usuario {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     
     @Column(name="nome")
-    String nome;
+     String nome;
     
     @ManyToOne
     Endereco endereco;

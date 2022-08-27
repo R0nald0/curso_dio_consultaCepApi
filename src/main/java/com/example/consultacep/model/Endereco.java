@@ -12,8 +12,8 @@ import lombok.Data;
 @Data
 public class Endereco {
     @Id
-
     private String cep;
+    
     private String logradouro;
     private String complemento;
     private String bairro;

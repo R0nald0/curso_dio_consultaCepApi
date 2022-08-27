@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.consultacep.model.Usuario;
 import com.example.consultacep.service.UsuarioService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,12 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 
 @RestController
 @CrossOrigin(origins = "**",maxAge = 3600)
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UsuarioController {
     
   @Autowired
@@ -35,6 +35,7 @@ public class UsuarioController {
 
    @PostMapping
    public ResponseEntity<Usuario> inserirUsuario(@RequestBody Usuario usuario){
+        uService.insertUser(usuario);
         return ResponseEntity.ok(usuario);
    }
 
